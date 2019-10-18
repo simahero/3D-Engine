@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="947fb878-f32c-4a2f-8d82-142662406bb1" name="Default Changelist" comment="" />
+    <list default="true" id="947fb878-f32c-4a2f-8d82-142662406bb1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Matrix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Mesh.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Mesh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Mesh.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,16 +22,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+            <state relative-caret-position="374">
+              <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Main#0;class#Main#0" />
-                <element signature="e#3950#3951#0" expanded="true" />
-                <element signature="e#3976#3977#0" expanded="true" />
+                <element signature="e#4953#4954#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,20 +39,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="391">
+              <caret line="35" column="60" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Mesh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="103" column="49" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+            <state relative-caret-position="320">
+              <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
               <folding>
                 <element signature="method#init#0;class#Mesh#0" />
-                <element signature="method#rotateItAgain#0;class#Mesh#0" />
+                <element signature="method#rotateIt#0;class#Mesh#0" />
+                <element signature="method#rotateItX#1;class#Mesh#0" />
+                <element signature="method#addNormalVector#0;class#Mesh#0" />
                 <element signature="method#projectIt#0;class#Mesh#0" />
                 <element signature="method#scaleIt#0;class#Mesh#0" />
               </folding>
@@ -96,15 +105,15 @@
         <option value="$PROJECT_DIR$/src/Main/Terrain.java" />
         <option value="$PROJECT_DIR$/src/Main/Points.java" />
         <option value="$PROJECT_DIR$/src/Main/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/Main/Mesh.java" />
         <option value="$PROJECT_DIR$/src/Main/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/Main/Mesh.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="515" />
-    <option name="width" value="1412" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -112,6 +121,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,8 +149,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,10 +202,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="515" y="0" width="1412" height="1057" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022189349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.048507463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -205,7 +214,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22727273" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22400858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -213,7 +222,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32900432" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3279743" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -235,23 +244,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Points.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Main#0;class#Main#0" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3976#3977#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -262,22 +258,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Points.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="391">
+          <caret line="35" column="60" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Mesh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="103" column="49" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+        <state relative-caret-position="320">
+          <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
           <folding>
             <element signature="method#init#0;class#Mesh#0" />
-            <element signature="method#rotateItAgain#0;class#Mesh#0" />
+            <element signature="method#rotateIt#0;class#Mesh#0" />
+            <element signature="method#rotateItX#1;class#Mesh#0" />
+            <element signature="method#addNormalVector#0;class#Mesh#0" />
             <element signature="method#projectIt#0;class#Mesh#0" />
             <element signature="method#scaleIt#0;class#Mesh#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Main#0;class#Main#0" />
+            <element signature="e#4953#4954#0" expanded="true" />
           </folding>
         </state>
       </provider>

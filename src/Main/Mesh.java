@@ -7,14 +7,13 @@ public class Mesh {
     enum ObjectShape {
         CUBE,
         TERRAIN
-
     }
+
+    static Points [][] grid = new Points[20][20];
 
     static ArrayList<Triangle> basicShape = new ArrayList<>();
     static ArrayList<Triangle> rotatedShape = new ArrayList<>();
     static ArrayList<Triangle> projectedShape = new ArrayList<>();
-
-    static Points [][] grid = new Points[5][5];
 
     public static void init(ObjectShape objectShape) {
         if (objectShape == ObjectShape.CUBE) {
@@ -59,8 +58,8 @@ public class Mesh {
             Mesh.basicShape.add(t12);
         }
         if (objectShape == ObjectShape.TERRAIN){
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 5; j++) {
+            for (int i = 0; i < 20; i++) {
+                for (int j = 0; j < 20; j++) {
                     grid[i][j] = new Points(i, 1, j, 1);
 
                 }
@@ -78,23 +77,38 @@ public class Mesh {
                 }
             }
         }
-        //grid[1][2].y = 0.25f;
-        //grid[2][3].y = 0;
-        //grid[3][4].y = 0.5f;
     }
 
-    public static void rotateIt(float[][] rotateMatrix, ArrayList<Triangle> arr) {
+    public static void rotateItX(ArrayList<Triangle> arr, float angle) {
+        float[][] rotateX = {{1, 0, 0, 0},
+                {0, (float)Math.cos(Math.toDegrees(angle)), (float)-Math.sin(Math.toDegrees(angle)), 0},
+                {0, (float)Math.sin(Math.toDegrees(angle)), (float)Math.cos(Math.toDegrees(angle)), 0},
+                {0, 0, 0, 1}};
         for (int i = 0; i < arr.size(); i++) {
-                Triangle rotated = new Triangle(Matrix.matrixMul(rotateMatrix, arr.get(i).points[0]), Matrix.matrixMul(rotateMatrix, arr.get(i).points[1]), Matrix.matrixMul(rotateMatrix, arr.get(i).points[2]));
+                Triangle rotated = new Triangle(Matrix.matrixMul(rotateX, arr.get(i).points[0]), Matrix.matrixMul(rotateX, arr.get(i).points[1]), Matrix.matrixMul(rotateX, arr.get(i).points[2]));
                 rotatedShape.add(rotated);
-
         }
     }
 
-    public static void rotateItAgain(float[][] rotateMatrix, ArrayList<Triangle> arr) {
+    public static void rotateItY(ArrayList<Triangle> arr, float angle) {
+        float[][] rotateY = {{(float) Math.cos(Math.toRadians(angle)), 0, (float)Math.sin(Math.toRadians(angle)), 0},
+                {0, 1, 0, 0},
+                {-(float)Math.sin(Math.toRadians(angle)), 0, (float)Math.cos(Math.toRadians(angle)), 0},
+                {0, 0, 0, 1}};
         for (int i = 0; i < arr.size(); i++) {
-            Triangle rotated = new Triangle(Matrix.matrixMul(rotateMatrix, arr.get(i).points[0]), Matrix.matrixMul(rotateMatrix, arr.get(i).points[1]), Matrix.matrixMul(rotateMatrix, arr.get(i).points[2]));
-            rotatedShape.set(i, rotated);
+            Triangle rotated = new Triangle(Matrix.matrixMul(rotateY, arr.get(i).points[0]), Matrix.matrixMul(rotateY, arr.get(i).points[1]), Matrix.matrixMul(rotateY, arr.get(i).points[2]));
+            rotatedShape.add(rotated);
+        }
+    }
+
+    public static void rotateItZ(ArrayList<Triangle> arr, float angle) {
+        float[][] rotateZ = {{ (float)Math.cos(Math.toRadians(angle)), (float)-Math.sin(Math.toRadians(angle)), 0, 0},
+                {(float)Math.sin(Math.toRadians(angle)), (float)Math.cos(Math.toRadians(angle)), 0, 0},
+                {0, 0, 1, 0},
+                {0, 0, 0, 1}};
+        for (int i = 0; i < arr.size(); i++) {
+            Triangle rotated = new Triangle(Matrix.matrixMul(rotateZ, arr.get(i).points[0]), Matrix.matrixMul(rotateZ, arr.get(i).points[1]), Matrix.matrixMul(rotateZ, arr.get(i).points[2]));
+            rotatedShape.add(rotated);
         }
     }
 
@@ -132,10 +146,6 @@ public class Mesh {
             }
 
         }
-    }
-
-    public static void makeMountains(ArrayList<Triangle> arr){
-
     }
 
 }

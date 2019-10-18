@@ -2,11 +2,11 @@ package Main;
 
 public class Matrix {
 
-    public static double angle = 180f / 8f;
+    public static double angle = 180f * 1f;
     static float fNear = 1f;
     static float fFar = 1000.0f;
     static float fFov = 90.0f;
-    static float fAspectRation = Main.width / Main.height;
+    static float fAspectRation = 800f / 800f;
     static float fFovRad = 1.0f / (float) Math.tan(Math.toDegrees(fFov));
 
     public static Points matrixMul(float[][] arr, Points p){

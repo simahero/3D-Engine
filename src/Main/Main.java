@@ -16,7 +16,6 @@ public class Main implements Runnable {
     int offsetY = 600;
     Points camera;
     float angle = 0f;
-    boolean clear = false;
 
     public Main() {
         frame = new JFrame("TERRAIN");
@@ -29,6 +28,15 @@ public class Main implements Runnable {
     }
 
     public void update() {
+        Mesh.makeGrid();
+        Mesh.basicShape.clear();
+        Mesh.init(Mesh.ObjectShape.TERRAIN);
+        try {
+            Mesh.addMountains();
+            Thread.sleep(500);
+        } catch (InterruptedException e){
+
+        }
         Mesh.projectedShape.clear();
         Mesh.rotateItY(Mesh.basicShape, angle);
         for (int i = 0; i < Mesh.rotatedShape.size(); i++) {
@@ -57,42 +65,11 @@ public class Main implements Runnable {
                 Mesh.scaleIt(Mesh.projectedShape);
             }
         }
-
         Mesh.projectIt(Matrix.projection, Mesh.rotatedShape);
         Mesh.rotatedShape.clear();
         Mesh.scaleIt(Mesh.projectedShape);
-        angle += 1f;
-        /*
-        Mesh.rotateIt(Matrix.rotateZ, Mesh.basicShape);
-        Mesh.projectIt(Matrix.projection, Mesh.rotatedShape);
-        Mesh.scaleIt(Mesh.projectedShape);
-
-        for (Triangle t : Mesh.rotatedShape) {
-            float x1 = t.points[1].x - t.points[0].x;
-            float y1 = t.points[1].y - t.points[0].y;
-            float z1 = t.points[1].z - t.points[0].z;
-
-            float x2 = t.points[2].x - t.points[0].x;
-            float y2 = t.points[2].y - t.points[0].y;
-            float z2 = t.points[2].z - t.points[0].z;
-
-            float nx = y1 * z2 - z1 * y2;
-            float ny = z1 * x2 - x1 * z2;
-            float nz = x1 * y2 - y1 * x2;
-            float l = (float) Math.sqrt(nx * nx + ny * ny + nz * nz);
-            nx /= l;
-            ny /= l;
-            nz /= l;
-            if (nx * (t.points[0].x - camera.x) +
-                    ny * (t.points[0].y - camera.y) +
-                    nz * (t.points[0].z - camera.z) > 0) {
-                Mesh.projectIt(Matrix.projection, Mesh.rotatedShape);
-                Mesh.scaleIt(Mesh.projectedShape);
-            }
-        }
-
-         */
-
+        System.out.println(angle);
+        //angle += 1f;
     }
 
     public void render() {
@@ -105,7 +82,7 @@ public class Main implements Runnable {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, width, height);
         g.setColor(Color.CYAN);
-        g.translate(-offsetX, offsetY);
+        g.translate(-offsetX-200, offsetY+200);
         for (Triangle t : Mesh.projectedShape) {
             g.drawLine((int) t.points[0].x, (int) t.points[0].y, (int) t.points[1].x, (int) t.points[1].y);
             g.drawLine((int) t.points[1].x, (int) t.points[1].y, (int) t.points[2].x, (int) t.points[2].y);
@@ -118,14 +95,8 @@ public class Main implements Runnable {
 
     @Override
     public void run() {
-        BasicTimer timer = new BasicTimer(30);
+        BasicTimer timer = new BasicTimer(60);
         camera = new Points(0, 0, 0, 0);
-        Mesh.init(Mesh.ObjectShape.CUBE);
-        /*
-        Mesh.projectIt(Matrix.projection, Mesh.rotatedShape);
-        Mesh.scaleIt(Mesh.projectedShape);
-
-         */
         while (true) {
             timer.sync();
             update();

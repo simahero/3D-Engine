@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="947fb878-f32c-4a2f-8d82-142662406bb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terrain/Main/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terrain/Main/Mesh.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Mesh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Mesh.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,60 +18,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
+            <state relative-caret-position="370">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Main#0;class#Main#0" />
-                <element signature="e#4953#4954#0" expanded="true" />
+                <element signature="e#3903#3904#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="60" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Mesh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
-                <element signature="method#init#0;class#Mesh#0" />
-                <element signature="method#rotateIt#0;class#Mesh#0" />
-                <element signature="method#rotateItX#1;class#Mesh#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#rotateItX#0;class#Mesh#0" />
+                <element signature="method#rotateItY#0;class#Mesh#0" />
+                <element signature="method#rotateItZ#0;class#Mesh#0" />
                 <element signature="method#addNormalVector#0;class#Mesh#0" />
                 <element signature="method#projectIt#0;class#Mesh#0" />
                 <element signature="method#scaleIt#0;class#Mesh#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Triangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Points.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -88,6 +58,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>grid[</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,8 +81,8 @@
         <option value="$PROJECT_DIR$/src/Main/Points.java" />
         <option value="$PROJECT_DIR$/src/Main/Triangle.java" />
         <option value="$PROJECT_DIR$/src/Main/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/Main/Mesh.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
+        <option value="$PROJECT_DIR$/src/Main/Mesh.java" />
       </list>
     </option>
   </component>
@@ -121,8 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +122,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,7 +180,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.048507463" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.04904051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -214,7 +189,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22400858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22400858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,6 +226,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -258,36 +240,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="60" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="60" />
+        <state relative-caret-position="370">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Main#0;class#Main#0" />
+            <element signature="e#3903#3904#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Mesh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
-            <element signature="method#init#0;class#Mesh#0" />
-            <element signature="method#rotateIt#0;class#Mesh#0" />
-            <element signature="method#rotateItX#1;class#Mesh#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#rotateItX#0;class#Mesh#0" />
+            <element signature="method#rotateItY#0;class#Mesh#0" />
+            <element signature="method#rotateItZ#0;class#Mesh#0" />
             <element signature="method#addNormalVector#0;class#Mesh#0" />
             <element signature="method#projectIt#0;class#Mesh#0" />
             <element signature="method#scaleIt#0;class#Mesh#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Main#0;class#Main#0" />
-            <element signature="e#4953#4954#0" expanded="true" />
           </folding>
         </state>
       </provider>

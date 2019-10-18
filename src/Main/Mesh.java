@@ -1,6 +1,7 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Mesh {
 
@@ -9,11 +10,21 @@ public class Mesh {
         TERRAIN
     }
 
-    static Points [][] grid = new Points[20][20];
+    static int rows = 15;
+    static int cols = 15;
+    static Points [][] grid = new Points[rows][cols];
 
     static ArrayList<Triangle> basicShape = new ArrayList<>();
     static ArrayList<Triangle> rotatedShape = new ArrayList<>();
     static ArrayList<Triangle> projectedShape = new ArrayList<>();
+
+    public static void makeGrid(){
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                grid[i][j] = new Points(i, 0.5f, j, 1);
+            }
+        }
+    }
 
     public static void init(ObjectShape objectShape) {
         if (objectShape == ObjectShape.CUBE) {
@@ -58,16 +69,6 @@ public class Mesh {
             Mesh.basicShape.add(t12);
         }
         if (objectShape == ObjectShape.TERRAIN){
-            for (int i = 0; i < 20; i++) {
-                for (int j = 0; j < 20; j++) {
-                    grid[i][j] = new Points(i, 1, j, 1);
-
-                }
-            }
-            grid[1][1].y -= .25f;
-            grid[2][2].y -= .25f;
-            grid[3][3].y -= .25f;
-            grid[4][4].y -= .25f;
             for (int i = 0; i < grid.length-1; i++){
                 for (int j = 0; j < grid[i].length-1; j++){
                     Triangle t1 = new Triangle(grid[i][j], grid[i+1][j], grid[i+1][j+1]);
@@ -146,6 +147,22 @@ public class Mesh {
             }
 
         }
+    }
+
+    public static void addMountains(){
+        Random r = new Random();
+        for (int k = 0; k < grid[0].length; k++){
+            grid[rows - 1][k].y = 1;
+            grid[rows - 1][k].y += (r.nextFloat());
+            grid[rows - 1][k].y -= (r.nextFloat());
+        }
+
+        for (int i = grid.length-2; i > -1; i--){
+            for (int j = grid[i].length-2; j > -1; j--){
+                grid[i][j].y = grid[i+1][j+1].y;
+            }
+        }
+
     }
 
 }
